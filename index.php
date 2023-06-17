@@ -11,7 +11,7 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-	
+<img src="<?php echo get_theme_mod('brand_logo'); ?>" alt="brand logo" style="width:150px;">
 <?php wp_footer(); ?>
 </body>
 </html>

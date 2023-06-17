@@ -10,3 +10,23 @@ function enqueueing_styles_and_scripts(){
 }
 
 add_action('wp_enqueue_scripts', 'enqueueing_styles_and_scripts');
+
+function customizing_wpd($wp_customize){
+	$wp_customize-> add_section('header_area', array(
+		'title'=>'Choose Logo'
+	));
+
+	$wp_customize-> add_setting('brand_logo', array(
+		'default' => get_bloginfo('template_directory') . '/img/logo.svg',
+	));
+
+	$wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'brand_logo', array(
+		'label'=>'Logo Upload',
+		'description' => 'Change logo as you like',
+		'settings'=>'brand_logo',
+		'section'=>'header_area'
+	)));
+
+}
+
+add_action('customize_register', 'customizing_wpd');
