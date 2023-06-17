@@ -64,6 +64,29 @@ function customizing_wpd($wp_customize){ //Connection2
 		'settings'=>'site_title_setting',
 		'type'=>'text'
 	));
+	/* --------------------
+	 */
+
+	/*
+	 * Aliging Title
+	 * goes to under -> site_title_section
+	 *
+	 */
+	$wp_customize-> add_setting('site_title_align_setting', array(
+		'default'=>'left_align'
+	));
+
+	$wp_customize-> add_control('site_title_align_control', array(
+		'title'=>"Change Alignment",
+		'section'=>"site_title_section",
+		'settings'=>"site_title_align_setting",
+		'type'=>'radio',
+		'choices'=> array(
+			'left_align'=>"Left Align",
+			'center_align'=>"Center Align",
+			'right_align'=>"Right Align"
+		)
+	));
 }
 
 add_action('customize_register', 'customizing_wpd'); //Connection2

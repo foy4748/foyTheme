@@ -11,7 +11,11 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-<h1><?php echo get_theme_mod('site_title_setting'); ?></h1>
+
+<h1 class="<?php echo get_theme_mod('site_title_align_setting');?>">
+	<?php echo get_theme_mod('site_title_setting'); ?>
+</h1>
+
 <img src="<?php echo get_theme_mod('brand_logo'); ?>" alt="brand logo" style="width:150px;">
 <?php wp_footer(); ?>
 </body>

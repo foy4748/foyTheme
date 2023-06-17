@@ -4,3 +4,15 @@ body {
 	box-sizing: border-box;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.left_align {
+	text-align: left;
+}
+
+.center_align {
+	text-align: center;
+}
+
+.right_align {
+	text-align: right;
+}
